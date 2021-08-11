@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //Directive import:
 import { SimpleDirective } from './directives/simple/simple.directive';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomDirective } from './directives/custom/custom.directive';
+import { Custom2Directive } from './directives/custom2/custom2.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      * DON'T FORGET DO DECLARATE THE DIRECTIVE 
      * THAT YOU ARE USING IN YOUR MODULE!!!!!!!
      */
-    SimpleDirective
+    SimpleDirective,
+    CustomDirective,
+    Custom2Directive
   ],
   imports: [
     BrowserModule,
