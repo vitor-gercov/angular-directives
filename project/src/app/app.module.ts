@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SimpleDirective } from './directives/simple/simple.directive';
 import { CustomDirective } from './directives/custom/custom.directive';
 import { Custom2Directive } from './directives/custom2/custom2.directive';
+import { EventsDirective } from './directives/events/events.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Custom2Directive } from './directives/custom2/custom2.directive';
      */
     SimpleDirective,
     CustomDirective,
-    Custom2Directive
+    Custom2Directive,
+    EventsDirective
   ],
   imports: [
     BrowserModule,

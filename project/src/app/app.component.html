@@ -18,7 +18,7 @@
     <h3>Custom Directive</h3>
     <div class="row mb-3">
       <div class="col-6">
-        <div [appCustom]="'green'" class="card">
+        <div [appCustom]="'orange'" class="card">
           <div class="card-body text-white">
             I am using a Custom Directive >:)
           </div>
@@ -26,7 +26,7 @@
       </div>
 
       <div class="col-6">
-        <div [appCustom]="'yellow'" class="card">
+        <div [appCustom]="'orange'" class="card">
           <div class="card-body">
             Me too! :D
           </div>
@@ -35,14 +35,14 @@
     </div>
 
     <h3>Custom2 Directive</h3>
-    <div class="row">
+    <div class="row mb-3">
       <div class="col-6">
         <!-- 
           Notice that we still need to call the directive selector!
           If you don't call the directive selector, you will get a
           compilation error!
          -->
-        <div randomNameLol [background]="'black'" [textColor]="'blue'" class="card">
+        <div randomNameLol [background]="'red'" [textColor]="'yellow'" class="card">
           <div class="card-body">
             Just showing another way to use custom directives
           </div>
@@ -55,6 +55,13 @@
             And it still works!
           </div>
         </div>
+      </div>
+    </div>
+
+    <h3>Events Directive</h3>
+    <div appEvents [originalColor]="'orange'" [hoverColor]="'red'" class="card">
+      <div class="card-body text-white">
+        I change my color on hover :)
       </div>
     </div>
 
