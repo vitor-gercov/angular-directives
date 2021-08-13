@@ -9,6 +9,10 @@ import { SimpleDirective } from './directives/simple/simple.directive';
 import { CustomDirective } from './directives/custom/custom.directive';
 import { Custom2Directive } from './directives/custom2/custom2.directive';
 import { EventsDirective } from './directives/events/events.directive';
+import { SimpleDirectiveComponent } from './components/simple-directive/simple-directive.component';
+import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
+import { Custom2DirectiveComponent } from './components/custom2-directive/custom2-directive.component';
+import { EventsDirectiveComponent } from './components/events-directive/events-directive.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { EventsDirective } from './directives/events/events.directive';
     SimpleDirective,
     CustomDirective,
     Custom2Directive,
-    EventsDirective
+    EventsDirective,
+    SimpleDirectiveComponent,
+    CustomDirectiveComponent,
+    Custom2DirectiveComponent,
+    EventsDirectiveComponent
   ],
   imports: [
     BrowserModule,

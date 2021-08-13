@@ -1,70 +1,20 @@
-<div class="row">
-  <div class="col-10 col-lg-6 mx-auto mt-5">
-    
-    <h1>Angular directives</h1>
-    <p>Shown in practice</p>
-    
-    <p class="text-muted m-0">Read the comments in the directives to learn the difference 
-      between each directive in this project.</p>
-    <p class="text-muted mb-5">I recommend starting by the <strong>simple directive</strong>.</p>
-    
-    <h3>Simple Directive</h3>
-    <div appSimple class="card mb-3">
-      <div class="card-body text-white">
-        I am a div, and I am using a Simple Directive :)
-      </div>
-    </div>
+<div class="col-10 col-lg-6 mx-auto mt-5">
 
-    <h3>Custom Directive</h3>
-    <div class="row mb-3">
-      <div class="col-6">
-        <div [appCustom]="'orange'" class="card">
-          <div class="card-body text-white">
-            I am using a Custom Directive >:)
-          </div>
-        </div>
-      </div>
+  <h1>Angular directives</h1>
+  <p>Shown in practice</p>
 
-      <div class="col-6">
-        <div [appCustom]="'orange'" class="card">
-          <div class="card-body">
-            Me too! :D
-          </div>
-        </div>
-      </div>
-    </div>
+  <p class="text-muted m-0">Read the comments in the directives to learn the difference
+    between each directive in this project.</p>
+  <p class="text-muted mb-5">I recommend starting by the <strong>simple directive</strong>.</p>
 
-    <h3>Custom2 Directive</h3>
-    <div class="row mb-3">
-      <div class="col-6">
-        <!-- 
-          Notice that we still need to call the directive selector!
-          If you don't call the directive selector, you will get a
-          compilation error!
-         -->
-        <div randomNameLol [background]="'red'" [textColor]="'yellow'" class="card">
-          <div class="card-body">
-            Just showing another way to use custom directives
-          </div>
-        </div>
-      </div>
+  <simple-directive-card></simple-directive-card>
 
-      <div class="col-6">
-        <div randomNameLol [background]="'brown'" [textColor]="'orange'" class="card">
-          <div class="card-body">
-            And it still works!
-          </div>
-        </div>
-      </div>
-    </div>
+  <custom-directive-cards div1color="black" div2color="orange"></custom-directive-cards>
 
-    <h3>Events Directive</h3>
-    <div appEvents [originalColor]="'orange'" [hoverColor]="'red'" class="card">
-      <div class="card-body text-white">
-        I change my color on hover :)
-      </div>
-    </div>
+  <custom2-directive-cards div1color="purple" text1color="white" div2color="snow" text2color="purple">
+  </custom2-directive-cards>
 
-  </div>
+  <events-directive-cards hoverCardInitialColor="green" hoverCardOnHoverColor="purple"></events-directive-cards>
+
 </div>
 <router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+<h3>Custom2 Directive</h3>
+<div class="row mb-3">
+    <div class="col-6">
+        <!-- 
+      Notice that we still need to call the directive selector!
+      If you don't call the directive selector, you will get a
+      compilation error!
+     -->
+        <div randomNameLol [background]="div1color" [textColor]="text1color" class="card">
+            <div class="card-body">
+                {{div1text}}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div randomNameLol [background]="div2color" [textColor]="text2color" class="card">
+            <div class="card-body">
+                {{div2text}}
+            </div>
+        </div>
+    </div>
+</div>
