@@ -53,7 +53,7 @@
   Pro tip: Do not repeat directives names.</p>
 <pre>
 <code>
-    import { Directive } from '@angular/core';
+import { Directive } from '@angular/core';
 
 @Directive({
   selector: '[appSimple]'
@@ -66,14 +66,14 @@ export class SimpleDirective {
 </pre>
 <label>In the HTML:</label>
 <code>
-  <p appSimple>Some text.</p>
+  &lt;p appSimple&gt;Some text.&lt;/p&gt;
 </code>
 <p>Another important decorator is the <strong>HostBinding</strong> decorator, wich will indicate what your directive
   will change in the HTML native element (Of course, if your directive changes anything visually only :P).</p>
 <p>The following example, I set the background color of the HTML element to be purple.</p>
 <pre>
 <code>
-  import { Directive, HostBinding } from '@angular/core';
+import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appSimple]'
@@ -89,5 +89,59 @@ export class SimpleDirective {
 </pre>
 <hr>
 <h2 id="custom-directives">Custom Directives</h2>
+<p>You can have variables in the directive class with the Input decorator, that way you can pass dynamic values to your directive!</p>
+<p>In the following example, I have a variable with the Input decorator to change the div color dynamically.</p>
+<pre>
+<code>
+import { Directive, HostBinding, Input } from '@angular/core';
+
+@Directive({
+  selector: '[appSimple]'
+})
+export class SimpleDirective {
+
+  @Input()
+  @HostBinding('style.backgroundColor')
+  backgroundColor: string = 'purple' //purple will be the default value if you do not pass anything to the Input variable.
+
+  constructor() { }
+}
+</code>
+</pre>
+<label>In the HTML:</label>
+<pre>
+<code>
+  &lt;div appSimple backgroundColor="blue"&gt;Some text.&lt;/div&gt;
+  //this will change the background color from purple to blue!
+</code>
+</pre>
+<p>You can also pass multiple parameters to your directive.</p>
+<pre>
+<code>
+import { Directive, HostBinding, Input } from '@angular/core';
+
+@Directive({
+  selector: '[appSimple]'
+})
+export class SimpleDirective {
+
+  @Input()
+  @HostBinding('style.backgroundColor')
+  backgroundColor: string = 'purple' //purple will be the default value if you do not pass anything to the Input variable.
+
+  @Input()
+  @HostBinding('style.color')
+  textColor: string = 'white'
+
+  constructor() { }
+}
+</code>
+</pre>
+<p>In the HTML:</p>
+<pre>
+<code>
+&lt;div appSimple backgroundColor="yellow" textColor="purple"&gt;Go Lakers!&lt;/div&gt;
+</code>
+</pre>
 <hr>
 <h2 id="events-in-directives">Events in Directives</h2>
