@@ -21,7 +21,7 @@
   npm install -g @angular/cli
 </code>
 <p>Start a new project and open the project's folder in a terminal.</p>
-<label>To create a new project via Angular CLI:</label>
+<p>To create a new project via Angular CLI:</p>
 <code>
   ng new project-name
 </code>
@@ -39,8 +39,8 @@
   ng g d directive-name
 </code>
 <p>As everything in the Angular CLI, you can pass the path you want in the command</p>
-<label>Example: Command for the Angular CLI create a my-directive folder into a directives folder, into a shared folder,
-  into the app folder of the project.</label>
+<p>Example: Command for the Angular CLI create a my-directive folder into a directives folder, into a shared folder,
+  into the app folder of the project.</p>
 <code>
   ng g d shared/directives/my-directive
 </code>
@@ -51,6 +51,7 @@
 <p>The metadata object needs the <strong>selector</strong> property, wich is a string containing the name of the
   directive, this will be the value that you will need to pass in the HTML element.
   Pro tip: Do not repeat directives names.</p>
+<pre>
 <code>
     import { Directive } from '@angular/core';
 
@@ -62,6 +63,7 @@ export class SimpleDirective {
   constructor() { }
 }
 </code>
+</pre>
 <label>In the HTML:</label>
 <code>
   <p appSimple>Some text.</p>
@@ -69,6 +71,7 @@ export class SimpleDirective {
 <p>Another important decorator is the <strong>HostBinding</strong> decorator, wich will indicate what your directive
   will change in the HTML native element (Of course, if your directive changes anything visually only :P).</p>
 <p>The following example, I set the background color of the HTML element to be purple.</p>
+<pre>
 <code>
   import { Directive, HostBinding } from '@angular/core';
 
@@ -83,6 +86,7 @@ export class SimpleDirective {
   constructor() { }
 }
 </code>
+</pre>
 <hr>
 <h2 id="custom-directives">Custom Directives</h2>
 <hr>
