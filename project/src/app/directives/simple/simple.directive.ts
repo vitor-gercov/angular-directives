@@ -1,6 +1,5 @@
 import { Directive, HostBinding } from '@angular/core';
 
-//Here it is, a simple directive:
 /**
  * Here it is, a simple directive:
  * 
