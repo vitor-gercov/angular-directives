@@ -1,7 +1,15 @@
 <h1>Angular Directives</h1>
 <p>Simple project showing what angular directives can do :)</p>
+<h3>Side note:</h3>
 <p>
-  <strong>Side note</strong>:
+  This project has the only purpose to share practical knowledge in the topic, I still am a junior developer,
+  and this project will not contain deep knowledge and uncommon examples with hacker's stuff.
+</p>
+<p>
+IF YOU ARE HERE BECAUSE YOU WANT TO LEARN HOW TO LOAD COMPONENTS DYNAMICALLY WITH DIRECTIVES, THIS IS NOT THE PLACE, I WILL MAKE ANOTHER PROJECT TO TEACH THIS BECAUSE I THINK THIS IS A VERY IMPORTANT AND USEFUL KNOWLEDGE.
+</p>
+<p>The project contains different examples from the read me.</p>
+<p>
   If you notice something wrong in the project or have any questions, I would be happy to
   help you! Just contact me through here in the issues section or send me an email.
 </p>
@@ -13,6 +21,7 @@
   <li><a href="#simple-directives">Simple Directives</a></li>
   <li><a href="#custom-directives">Custom Directives</a></li>
   <li><a href="#events-in-directives">Events in Directives</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 <hr>
 <h2 id="creating-directives-via-cli">Creating Directives via CLI</h2>
@@ -108,7 +117,7 @@ export class SimpleDirective {
 }
 </code>
 </pre>
-<label>In the HTML:</label>
+<p>In the HTML:</p>
 <pre>
 <code>
   &lt;div appSimple backgroundColor="blue"&gt;Some text.&lt;/div&gt;
@@ -145,3 +154,50 @@ export class SimpleDirective {
 </pre>
 <hr>
 <h2 id="events-in-directives">Events in Directives</h2>
+<p>We can use the HostListener decorator to bind a function to some event on the element with the directive.</p>
+<p>The HostListener decorator is imported from @angular/core and it receives a string containing the DOM event as a parameter.</p>
+<p>For a full DOM events list, check <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">this</a> out!</p>
+<p>In the following example, I change the div's background color from white to pink on hover.</p>
+<pre>
+<code>
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
+
+@Directive({
+  selector: '[appSimple]'
+})
+export class SimpleDirective {
+
+  @HostBinding('style.backgroundColor')
+  backgroundColor: string = 'white'
+  
+  originalColor: string = 'white'
+  hoverColor: string = 'pink'
+
+  constructor() { }
+
+  @HostListener('mouseenter')
+  mouseHover(): void {
+    this.backGroundColor = this.hoverColor
+  }
+
+  @HostListener('mouseleave')
+  mouseLeave(): void {
+    this.backGroundColor = this.originalColor
+  }
+}
+</code>
+</pre>
+<p>In the HTML:</p>
+<pre>
+<code>
+&lt;div appSimple&gt;I blush when you hover me :3&lt;/div&gt;
+</code>
+</pre>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Angular directives has a lot of visual applications and can help your life a lot! Don't sleep on it!</p>
+<p>If you want to know more about directives, you can go to the <a href="https://angular.io/api/core/Directive">
+Angular documentation</a>, you will find literally everything there.</p>
+<p>Thanks for your time, if want to talk with me about coding, games or anything, you can send me an e-mail :)</p>
+<hr>
+<p>Other projects: Soon I will leave the link to my other projects here, when they are done. For now you can check my <a href="https://github.com/vitor-gercov">profile</a>;)</p>
