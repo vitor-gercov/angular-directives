@@ -156,7 +156,7 @@ export class SimpleDirective {
 <h2 id="events-in-directives">Events in Directives</h2>
 <p>We can use the HostListener decorator to bind a function to some event on the element with the directive.</p>
 <p>The HostListener decorator is imported from @angular/core and it receives a string containing the DOM event as a parameter.</p>
-<p>For a full DOM events list, check <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">this</a> out!</p>
+<p>For a full DOM events list, check <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank">this</a> out!</p>
 <p>In the following example, I change the div's background color from white to pink on hover.</p>
 <pre>
 <code>
@@ -196,8 +196,8 @@ export class SimpleDirective {
 <hr>
 <h2 id="conclusion">Conclusion</h2>
 <p>Angular directives has a lot of visual applications and can help your life a lot! Don't sleep on it!</p>
-<p>If you want to know more about directives, you can go to the <a href="https://angular.io/api/core/Directive">
+<p>If you want to know more about directives, you can go to the <a href="https://angular.io/api/core/Directive" target="_blank">
 Angular documentation</a>, you will find literally everything there.</p>
 <p>Thanks for your time, if want to talk with me about coding, games or anything, you can send me an e-mail :)</p>
 <hr>
-<p>Other projects: Soon I will leave the link to my other projects here, when they are done. For now you can check my <a href="https://github.com/vitor-gercov">profile</a>;)</p>
+<p>Other projects: Soon I will leave the link to my other projects here, when they are done. For now you can check my <a href="https://github.com/vitor-gercov" target="_blank">profile</a>;)</p>
