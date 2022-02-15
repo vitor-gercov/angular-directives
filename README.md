@@ -73,7 +73,7 @@ export class SimpleDirective {
 }
 </code>
 </pre>
-<label>In the HTML:</label>
+<p>In the HTML:</p>
 <code>
   &lt;p appSimple&gt;Some text.&lt;/p&gt;
 </code>
